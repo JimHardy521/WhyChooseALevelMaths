@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Why Choose A Level Maths?</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div>
+      <h1>Why Choose A Level Maths?</h1>
+      <p>Explore where studying A Level Maths can take you</p>
+    </div>
+
+<div class="header-buttons">
+
+  <button id="contributeButton" class="about-button">Contribute</button>
+    <button id="aboutButton" class="about-button">About</button>
+  <button id="linksButton" class="about-button">Links</button>
+</div>
+  </header>
+
+  <main>
+
+    <section class="filters" aria-label="Filters">
+
+    <label for="genderFilter">Gender:</label>
+<select id="genderFilter">
+  <option value="All">All</option>
+  <option value="Female">Female</option>
+  <option value="Male">Male</option>
+</select>
+
+<label for="regionFilter">Region:</label>
+<select id="regionFilter">
+  <option value="All">All</option>
+</select>
+
+<label for="industryFilter">Industry:</label>
+<select id="industryFilter">
+  <option value="All">All</option>
+</select>
+
+      <label for="aLevelFilter">Other A Level:</label>
+      <select id="aLevelFilter">
+        <option value="All">All</option>
+      </select>
+
+<div class="people-count">
+  <span id="peopleCount"></span>
+</div>
+
+    </section>
+
+    <section id="peopleGrid" class="people-grid" aria-label="People montage"></section>
+
+  </main>
+
+  <!-- PROFILE MODAL -->
+
+  <div id="profileModal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modalName">
+
+    <div class="modal-card postcard">
+
+      <button id="closeProfileModal" class="close-button" aria-label="Close profile">
+        &times;
+      </button>
+
+      <img id="modalImage" class="modal-image" src="" alt="" />
+
+      <div class="modal-content">
+
+        <h2 id="modalName"></h2>
+
+        <p class="region-line" id="modalRegion"></p>
+
+        <p class="role-line">
+          <strong id="modalJobRole"></strong>
+          <span id="modalIndustry"></span>
+        </p>
+        
+    
+      <div class="answer-block">
+          <h3>Other A Levels Taken:</h3>
+          <p id="modalALevels"></p>
+        </div>
+
+        <div class="answer-block">
+          <h3>Why did you choose A Level Maths?</h3>
+          <p id="modalWhy"></p>
+        </div>
+
+        <div class="answer-block">
+          <h3>What did you enjoy about A Level Maths?</h3>
+          <p id="modalEnjoyed"></p>
+        </div>
+
+        <div class="answer-block">
+          <h3>How do you use maths in your job?</h3>
+          <p id="modalUses"></p>
+        </div>
+
+        <div class="answer-block">
+          <h3>Anything else?</h3>
+          <p id="modalAnythingElse"></p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- ABOUT MODAL -->
+
+  <div id="aboutModal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="aboutTitle">
+
+    <div class="modal-card about-card">
+
+  <button id="closeAboutModal" class="close-button" aria-label="Close about">
+    &times;
+  </button>
+
+  <h2 id="aboutTitle">About this website</h2>
+
+  <p>
+    This website helps students explore where A Level Maths can lead.
+    Each postcard features someone who studied maths and went on to use
+    their skills in a wide range of careers and industries.
+  </p>
+
+  <p>
+    Click on a photo to discover their story: why they chose A Level Maths,
+    what they enjoyed, and how maths helps them in their job today.
+  </p>
+
+  <p>
+    As a father of two young girls, and as an A Level Maths Lead at a large, outstanding school in Nottinghamshire,
+    I am particularly interested in highlighting how studying
+    A Level Maths has supported women in their careers.
+  </p>
+
+    <p>
+    Best wishes, <br>Jim
+  </p>
+
+
+<div class="social-links">
+          <a href="https://bsky.app/profile/jim-hardy.bsky.social" target="_blank" rel="noopener noreferrer">
+            <i class="fa-solid fa-cloud"></i>
+            @jim-hardy.bsky.social
+          </a>
+        </div>
+
+        <div class="social-links">
+          <a href="https://twitter.com/Rush_MathsKS5" target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-twitter"></i>
+            @Rush_MathsKS5
+          </a>
+        </div>
+
+</div>
+
+  </div>
+
+  <!-- CONTRIBUTE MODAL -->
+
+  <div id="contributeModal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="contributeTitle">
+
+    <div class="modal-card about-card">
+
+      <button id="closeContributeModal" class="close-button" aria-label="Close contribute">
+        &times;
+      </button>
+
+      <h2 id="contributeTitle">Contribute to the website</h2>
+
+      <p>
+        Did you study A Level Maths?
+        I’d love to include your story.
+      </p>
+
+      <p>
+        Please complete the contribution form with your photo,
+        career details and answers to a few short questions.
+      </p>
+
+      <a
+        class="form-link"
+        href="https://docs.google.com/forms/d/e/1FAIpQLSfnsJAn70LWeun8wPDW_-dda2iw8agoBaj_zR2ner2_yGiKGA/viewform?usp=publish-editor"
+        target="_blank"
+      >
+        Complete the contribution form
+      </a>
+
+    </div>
+
+  </div>
+
+  <!-- LINKS MODAL -->
+
+<div id="linksModal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="linksTitle">
+
+  <div class="modal-card about-card">
+
+    <button id="closeLinksModal" class="close-button" aria-label="Close links">
+      &times;
+    </button>
+
+    <h2 id="linksTitle">Further reading</h2>
+
+
+
+
+<div class="resource-link">
+  <a href="https://amsp.org.uk/teachers/11-16-maths/transition-to-level-3-maths/why-study-maths/" target="_blank">
+    AMSP – Why Study Maths
+  </a>
+</div>
+<p> </p>
+<div class="resource-link">
+  <a href="https://oxbridgehomelearning.uk/blog/five-reasons-a-level-maths-matters/?srsltid=AfmBOop-gaPgEFpoL20pEbK8rvSlrXKUC6JHdUOSmxguPGtIU7b33Ydz" target="_blank">
+    Oxbridge Home Learning – Five Reasons A Level Maths Matters
+  </a>
+</div>
+<p> </p>
+<div class="resource-link">
+  <a href="https://education.casio.co.uk/blog/4-reasons-a-level-maths-is-brilliant/" target="_blank">
+    Casio – 4 Reason A Level Maths Is A Brilliant Idea
+  </a>
+
+
+    </div>
+
+  </div>
+
+</div>
+
+  <script src="people.js"></script>
+
+  <script>
+
+    const peopleGrid = document.getElementById("peopleGrid");
+
+const genderFilter = document.getElementById("genderFilter");
+const regionFilter = document.getElementById("regionFilter");
+const industryFilter = document.getElementById("industryFilter");
+const aLevelFilter = document.getElementById("aLevelFilter");
+const peopleCount = document.getElementById("peopleCount");
+
+    const profileModal = document.getElementById("profileModal");
+    const closeProfileModal = document.getElementById("closeProfileModal");
+
+    const aboutButton = document.getElementById("aboutButton");
+    const aboutModal = document.getElementById("aboutModal");
+    const closeAboutModal = document.getElementById("closeAboutModal");
+
+    const contributeButton = document.getElementById("contributeButton");
+    const contributeModal = document.getElementById("contributeModal");
+    const closeContributeModal = document.getElementById("closeContributeModal");
+
+    const linksButton = document.getElementById("linksButton");
+    const linksModal = document.getElementById("linksModal");
+    const closeLinksModal = document.getElementById("closeLinksModal");
+
+    const sizeClasses = ["small", "medium", "large", "wide", "tall"];
+
+    function shuffleArray(array) {
+      return [...array].sort(() => Math.random() - 0.5);
+    }
+
+    function getRandomSizeClass() {
+      return sizeClasses[Math.floor(Math.random() * sizeClasses.length)];
+    }
+
+    function getOtherALevels(person) {
+      return person.otherALevels
+        .split(",")
+        .map(subject => subject.trim());
+    }
+
+    function populateFilters() {
+
+      const regions = [
+        ...new Set(
+        people.map(person => person.region)
+      )
+      ].sort();
+
+
+      const industries = [
+        ...new Set(
+          people.map(person => person.industry)
+        )
+      ].sort();
+
+      const aLevels = [
+        ...new Set(
+          people.flatMap(person => getOtherALevels(person))
+        )
+      ].sort();
+
+      regions.forEach(region => {
+
+  const option = document.createElement("option");
+
+  option.value = region;
+  option.textContent = region;
+
+  regionFilter.appendChild(option);
+
+});
+
+
+
+      industries.forEach(industry => {
+
+        const option = document.createElement("option");
+
+        option.value = industry;
+        option.textContent = industry;
+
+        industryFilter.appendChild(option);
+
+      });
+
+      aLevels.forEach(subject => {
+
+        const option = document.createElement("option");
+
+        option.value = subject;
+        option.textContent = subject;
+
+        aLevelFilter.appendChild(option);
+
+      });
+
+    }
+
+   function renderPeople() {
+  const selectedGender = genderFilter.value;
+  const selectedRegion = regionFilter.value;
+  const selectedIndustry = industryFilter.value;
+  const selectedALevel = aLevelFilter.value;
+
+  const filteredPeople = people.filter(person => {
+    const matchesGender =
+      selectedGender === "All" ||
+      person.gender === selectedGender;
+
+    const matchesRegion =
+      selectedRegion === "All" ||
+      person.region === selectedRegion;
+
+    const matchesIndustry =
+      selectedIndustry === "All" ||
+      person.industry === selectedIndustry;
+
+    const matchesALevel =
+      selectedALevel === "All" ||
+      getOtherALevels(person).includes(selectedALevel);
+
+    return matchesGender &&
+           matchesRegion &&
+           matchesIndustry &&
+           matchesALevel;
+  });
+
+  peopleCount.textContent =
+    `${filteredPeople.length} stories collected`;
+
+  const randomisedPeople = shuffleArray(filteredPeople);
+
+  peopleGrid.innerHTML = "";
+
+  randomisedPeople.forEach(person => {
+    const button = document.createElement("button");
+
+    button.className = `person-tile ${getRandomSizeClass()}`;
+
+    button.setAttribute(
+      "aria-label",
+      `View profile for ${person.name}`
+    );
+
+    const img = document.createElement("img");
+    img.src = person.image;
+    img.alt = person.name;
+
+    const nameOverlay = document.createElement("span");
+    nameOverlay.className = "name-overlay";
+    nameOverlay.textContent = person.name;
+
+    button.appendChild(img);
+    button.appendChild(nameOverlay);
+
+    button.addEventListener("click", () => {
+      openProfileModal(person);
+    });
+
+    peopleGrid.appendChild(button);
+  });
+}
+
+
+
+    function openProfileModal(person) {
+
+      document.getElementById("modalImage").src = person.image;
+      document.getElementById("modalImage").alt = person.name;
+
+      document.getElementById("modalName").textContent = person.name;
+
+document.getElementById("modalRegion").textContent =
+  person.region;
+
+document.getElementById("modalJobRole").textContent =
+  person.jobRole;
+
+      document.getElementById("modalIndustry").textContent =
+        ` · ${person.industry}`;
+
+      document.getElementById("modalALevels").textContent =
+        person.otherALevels;
+
+      document.getElementById("modalWhy").textContent =
+        person.whyALevelMaths;
+
+      document.getElementById("modalEnjoyed").textContent =
+        person.enjoyed;
+
+      document.getElementById("modalUses").textContent =
+        person.usesMaths;
+
+      document.getElementById("modalAnythingElse").textContent =
+        person.anythingElse;
+
+      profileModal.classList.remove("hidden");
+
+    }
+
+    function closeModal(modal) {
+      modal.classList.add("hidden");
+    }
+
+    genderFilter.addEventListener("change", renderPeople);
+    regionFilter.addEventListener("change", renderPeople);
+    industryFilter.addEventListener("change", renderPeople);
+    aLevelFilter.addEventListener("change", renderPeople);
+
+    closeProfileModal.addEventListener("click", () => {
+  closeModal(profileModal);
+});
+
+closeAboutModal.addEventListener("click", () => {
+  closeModal(aboutModal);
+});
+
+closeContributeModal.addEventListener("click", () => {
+  closeModal(contributeModal);
+});
+
+closeLinksModal.addEventListener("click", () => {
+  closeModal(linksModal);
+});
+
+aboutButton.addEventListener("click", () => {
+  aboutModal.classList.remove("hidden");
+});
+
+contributeButton.addEventListener("click", () => {
+  contributeModal.classList.remove("hidden");
+});
+
+linksButton.addEventListener("click", () => {
+  linksModal.classList.remove("hidden");
+});
+
+window.addEventListener("click", event => {
+
+  if (event.target === profileModal) {
+    closeModal(profileModal);
+  }
+
+  if (event.target === aboutModal) {
+    closeModal(aboutModal);
+  }
+
+  if (event.target === contributeModal) {
+    closeModal(contributeModal);
+  }
+
+  if (event.target === linksModal) {
+    closeModal(linksModal);
+  }
+
+});
+
+window.addEventListener("keydown", event => {
+
+  if (event.key === "Escape") {
+
+    closeModal(profileModal);
+    closeModal(aboutModal);
+    closeModal(contributeModal);
+    closeModal(linksModal);
+
+  }
+
+});
+
+    populateFilters();
+    renderPeople();
+
+  </script>
+
+</body>
+</html>
