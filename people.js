@@ -1,19 +1,7 @@
 const people = [
+ 
   {
-    name: "Aisha Rahman",
-    gender: "Female",
-    region: "East Midlands",
-    jobRole: "Structural Engineer",
-    industry: "Construction and Engineering",
-    whyALevelMaths: "I chose A Level Maths because I enjoyed solving problems and wanted to keep engineering open as an option.",
-    otherALevels: "Physics, Chemistry",
-    enjoyed: "I liked the sense of satisfaction when a difficult problem finally clicked.",
-    usesMaths: "I use maths to check loads, calculate forces, and make sure structures are safe.",
-    anythingElse: "Maths is useful in more careers than students often realise.",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=900&q=80"
-  },
-  {
-    name: "Tom Williams",
+    name: "Donald Trump",
     gender: "Male",
     region: "North East",
     jobRole: "Data Analyst",
@@ -23,23 +11,12 @@ const people = [
     enjoyed: "I enjoyed using data to spot patterns and make predictions.",
     usesMaths: "I analyse player performance, compare trends, and create reports for coaches.",
     anythingElse: "Being confident with numbers gives you a real advantage.",
-    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=900&q=80"
+    image: "images/donaldtrump.jpg",
+    imagePosition: "center 20%",
   },
+  
   {
-    name: "Maya Patel",
-    gender: "Female",
-    region: "East Midlands",
-    jobRole: "Doctor",
-    industry: "Healthcare",
-    whyALevelMaths: "I chose it because I wanted to study medicine and knew maths would strengthen my scientific thinking.",
-    otherALevels: "Computer Science, Biology",
-    enjoyed: "I enjoyed mechanics because it connected maths to the real world.",
-    usesMaths: "I use maths when interpreting research, understanding risk, and checking dosages.",
-    anythingElse: "Maths helped me become more logical and precise.",
-    image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=900&q=80"
-  },
-  {
-    name: "Daniel Chen",
+    name: "David Beckham",
     gender: "Male",
     region: "London",
     jobRole: "Software Developer",
@@ -49,36 +26,12 @@ const people = [
     enjoyed: "I enjoyed pure maths, especially algebra and functions.",
     usesMaths: "I use maths when writing algorithms, testing systems, and understanding performance.",
     anythingElse: "The problem-solving mindset is just as important as the content.",
-    image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=900&q=80"
+    image: "images/davidbeckham.jpg",
+      imagePosition: "center 20%",
   },
+  
   {
-    name: "Grace Evans",
-    gender: "Female",
-    region: "South East",
-    jobRole: "Architect",
-    industry: "Design and Built Environment",
-    whyALevelMaths: "I wanted a creative career, but I knew maths would help me understand space, scale and structure.",
-    otherALevels: "Computer Science, Physics",
-    enjoyed: "I enjoyed visual topics and problems where a diagram helped everything make sense.",
-    usesMaths: "I use scale, proportion, geometry and estimation when developing designs.",
-    anythingElse: "Maths and creativity work really well together.",
-    image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=900&q=80"
-  },
-  {
-    name: "Ben Carter",
-    gender: "Male",
-    region: "East Midlands",
-    jobRole: "Financial Planner",
-    industry: "Finance",
-    whyALevelMaths: "I wanted a subject that would be respected by universities and employers.",
-    otherALevels: "Economics, Physics",
-    enjoyed: "I enjoyed statistics and the way maths could be applied to real decisions.",
-    usesMaths: "I use percentages, growth models, risk calculations and projections with clients.",
-    anythingElse: "A Level Maths made me more confident explaining numbers to other people.",
-    image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=900&q=80"
-  },
-  {
-    name: "Jack Green",
+    name: "Peppa Pig",
     gender: "Female",
     region: "East Midlands",
     jobRole: "Environmental Scientist",
@@ -88,19 +41,22 @@ const people = [
     enjoyed: "I liked modelling and seeing how equations could describe real situations.",
     usesMaths: "I use data analysis, graphs and modelling to understand environmental change.",
     anythingElse: "Maths helps you ask better questions about the world.",
-    image: "https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=crop&w=900&q=80"
+    image: "images/peppapig.jpeg",
+    imagePosition: "center 20%",
   },
-  {
-    name: "Omar Hussain",
+  
+    {
+    name: "Jim Hardy",
     gender: "Male",
     region: "East Midlands",
-    jobRole: "Pilot",
-    industry: "Aviation",
-    whyALevelMaths: "I chose maths because I knew it would help with physics, navigation and flight training.",
-    otherALevels: "Business Studies, PE",
-    enjoyed: "I enjoyed mechanics because it linked closely to movement and forces.",
-    usesMaths: "I use mental arithmetic, speed-distance-time calculations, fuel planning and navigation.",
-    anythingElse: "Maths gives you confidence under pressure.",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=900&q=80"
+    jobRole: "Teacher",
+    industry: "Education & Training",
+    whyALevelMaths: "I always enjoyed Maths, and knew it would be valuable in my other A Levels and future pathways",
+    otherALevels: "Physics, Electronics, Further Maths",
+    enjoyed: "Small class sizes, the satisfaction of solving a problem, feeling clever!",
+    usesMaths: "I'm a maths teacher, so I use it everyday :-)",
+    anythingElse: "I hope you enjoy using this site.",
+    image: "images/jimhardy.jpg",
+    imagePosition: "center 20%",
   }
 ];

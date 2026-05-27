@@ -3,7 +3,37 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Why Choose A Level Maths?</title>
+
+  <title>Why Choose A Level Maths? | Careers, Stories and Subject Choices</title>
+
+  <meta
+    name="description"
+    content="Explore real stories from people who studied A Level Maths and discover the careers, industries and opportunities it can lead to."
+  />
+
+  <meta
+    name="keywords"
+    content="A Level Maths, why study A Level Maths, maths careers, careers with maths, A Level subject choices, sixth form maths"
+  />
+
+  <meta name="author" content="Jim Hardy" />
+
+  <meta property="og:title" content="Why Choose A Level Maths?" />
+  <meta
+    property="og:description"
+    content="Real career stories from people who studied A Level Maths."
+  />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://whychoosealevelmaths.co.uk" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Why Choose A Level Maths?" />
+  <meta
+    name="twitter:description"
+    content="Explore where studying A Level Maths can take you."
+  />
+  
+  
   <link rel="stylesheet" href="style.css" />
 
   <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
@@ -20,8 +50,9 @@
 
 <div class="header-buttons">
 
+   <button id="aboutButton" class="about-button">About</button>
   <button id="contributeButton" class="about-button">Contribute</button>
-    <button id="aboutButton" class="about-button">About</button>
+   
   <button id="linksButton" class="about-button">Links</button>
 </div>
   </header>
@@ -47,7 +78,7 @@
   <option value="All">All</option>
 </select>
 
-      <label for="aLevelFilter">Other A Level:</label>
+      <label for="aLevelFilter">Another A Level Studied:</label>
       <select id="aLevelFilter">
         <option value="All">All</option>
       </select>
@@ -68,11 +99,15 @@
 
     <div class="modal-card postcard">
 
-      <button id="closeProfileModal" class="close-button" aria-label="Close profile">
-        &times;
-      </button>
+  
 
-      <img id="modalImage" class="modal-image" src="" alt="" />
+  <button id="closeProfileModal" class="close-button" aria-label="Close profile">
+    &times;
+  </button>
+
+  <img id="modalImage" class="modal-image" src="" alt="" />
+
+  <div class="modal-content">
 
       <div class="modal-content">
 
@@ -114,6 +149,9 @@
       </div>
 
     </div>
+ 
+
+  </div>
 
   </div>
 
@@ -127,27 +165,20 @@
     &times;
   </button>
 
-  <h2 id="aboutTitle">About this website</h2>
+  <h2 id="aboutTitle">Thanks For Visiting...</h2>
 
   <p>
-    This website helps students explore where A Level Maths can lead.
-    Each postcard features someone who studied maths and went on to use
-    their skills in a wide range of careers and industries.
+    I am the A Level Maths Lead at Rushcliffe Spencer Academy - a large, outstanding secondary school in Nottinghamshire, and am interested in how A Level Mathematics has proved interesting and useful to others.
   </p>
 
   <p>
-    Click on a photo to discover their story: why they chose A Level Maths,
-    what they enjoyed, and how maths helps them in their job today.
+    Whilst there is an insignificant gender gap at GCSE, the number of boys who then study A Level Mathematics far exceeds that of girls. In my role, and as a father of two young girls, I am particularly interested in showcasing women who have progressed with A Level Maths.
   </p>
 
   <p>
-    As a father of two young girls, and as an A Level Maths Lead at a large, outstanding school in Nottinghamshire,
-    I am particularly interested in highlighting how studying
-    A Level Maths has supported women in their careers.
-  </p>
-
-    <p>
-    Best wishes, <br>Jim
+    Thank you so much for visiting the site, and I hope you consider contributing.
+ 
+   <br>Jim
   </p>
 
 
@@ -179,7 +210,7 @@
         &times;
       </button>
 
-      <h2 id="contributeTitle">Contribute to the website</h2>
+      <h2 id="contributeTitle">Contribute To The Site</h2>
 
       <p>
         Did you study A Level Maths?
@@ -187,16 +218,23 @@
       </p>
 
       <p>
-        Please complete the contribution form with your photo,
-        career details and answers to a few short questions.
+        Please complete the contribution form and I will get your entry added as soon as I am able.
       </p>
+
+      <p>
+        I'd be grateful too if you could pass this site onto your friends and colleagues, helping me collect a wide range of profiles.
+      </p>
+      
+         <p>
+    Thank you! <br>Jim
+  </p>
 
       <a
         class="form-link"
         href="https://docs.google.com/forms/d/e/1FAIpQLSfnsJAn70LWeun8wPDW_-dda2iw8agoBaj_zR2ner2_yGiKGA/viewform?usp=publish-editor"
         target="_blank"
       >
-        Complete the contribution form
+        Complete The Contribution Form
       </a>
 
     </div>
@@ -213,7 +251,7 @@
       &times;
     </button>
 
-    <h2 id="linksTitle">Further reading</h2>
+    <h2 id="linksTitle">For Further Reading...</h2>
 
 
 
@@ -245,6 +283,7 @@
   <script src="people.js"></script>
 
   <script>
+
 
     const peopleGrid = document.getElementById("peopleGrid");
 
@@ -373,7 +412,7 @@ const peopleCount = document.getElementById("peopleCount");
   });
 
   peopleCount.textContent =
-    `${filteredPeople.length} stories collected`;
+    `${filteredPeople.length} stories collected so far`;
 
   const randomisedPeople = shuffleArray(filteredPeople);
 
@@ -390,8 +429,9 @@ const peopleCount = document.getElementById("peopleCount");
     );
 
     const img = document.createElement("img");
-    img.src = person.image;
-    img.alt = person.name;
+img.src = person.image;
+img.alt = person.name;
+img.style.objectPosition = person.imagePosition || "center center";
 
     const nameOverlay = document.createElement("span");
     nameOverlay.className = "name-overlay";
@@ -412,8 +452,11 @@ const peopleCount = document.getElementById("peopleCount");
 
     function openProfileModal(person) {
 
-      document.getElementById("modalImage").src = person.image;
-      document.getElementById("modalImage").alt = person.name;
+  const modalImage = document.getElementById("modalImage");
+
+modalImage.src = person.image;
+modalImage.alt = person.name;
+modalImage.style.objectPosition = person.imagePosition || "center center";
 
       document.getElementById("modalName").textContent = person.name;
 
@@ -481,6 +524,7 @@ contributeButton.addEventListener("click", () => {
 linksButton.addEventListener("click", () => {
   linksModal.classList.remove("hidden");
 });
+
 
 window.addEventListener("click", event => {
 
