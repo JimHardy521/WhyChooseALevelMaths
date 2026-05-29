@@ -400,12 +400,48 @@ body {
   position: relative;
 }
 
-
-#profileModal {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.hidden {
+  display: none !important;
 }
 
+.modal {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.72);
+  z-index: 100;
+}
+
+@media (max-width: 760px) {
+  .modal {
+    align-items: start;
+    overflow-y: auto;
+    padding: 0.75rem;
+  }
+
+  .modal-card {
+    width: 100%;
+    max-height: none;
+    margin: 1rem 0;
+  }
+
+  .postcard {
+    grid-template-columns: 1fr;
+  }
+
+  .modal-image {
+    min-height: 260px;
+    max-height: 320px;
+  }
+
+  .close-button {
+    position: fixed;
+    top: 0.75rem;
+    right: 0.75rem;
+    z-index: 999;
+  }
+}
 
 }
