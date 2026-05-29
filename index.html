@@ -51,7 +51,7 @@
 
   gtag('config', 'G-XXXXXXXXXX');
 </script>
-  
+
 </head>
 
 <body>
@@ -59,7 +59,7 @@
   <header class="site-header">
     <div>
       <h1>Why Choose A Level Maths?</h1>
-      <p>Explore where studying A Level Maths can take you</p>
+      <p>Explore Where Studying A Level Maths Can Take You</p>
     </div>
 
 <div class="header-buttons">
@@ -123,7 +123,7 @@
 
   <div class="modal-content">
 
-      <div class="modal-content">
+
 
         <h2 id="modalName"></h2>
 
@@ -160,7 +160,13 @@
           <p id="modalAnythingElse"></p>
         </div>
 
-      </div>
+        <div class="profile-next-area">
+          <button id="nextProfileButton" class="next-profile-button">
+          Next profile →
+          </button>
+        </div>
+
+
 
     </div>
  
@@ -322,6 +328,11 @@ const peopleCount = document.getElementById("peopleCount");
     const linksModal = document.getElementById("linksModal");
     const closeLinksModal = document.getElementById("closeLinksModal");
 
+    const nextProfileButton = document.getElementById("nextProfileButton");
+
+    let currentFilteredPeople = [];
+    let currentPersonIndex = 0;
+
     const sizeClasses = ["small", "medium", "large", "wide", "tall"];
 
     function shuffleArray(array) {
@@ -425,6 +436,8 @@ const peopleCount = document.getElementById("peopleCount");
            matchesALevel;
   });
 
+  currentFilteredPeople = filteredPeople;
+
   peopleCount.textContent =
     `${filteredPeople.length} stories collected so far`;
 
@@ -454,9 +467,10 @@ img.style.objectPosition = person.imagePosition || "center center";
     button.appendChild(img);
     button.appendChild(nameOverlay);
 
-    button.addEventListener("click", () => {
-      openProfileModal(person);
-    });
+   button.addEventListener("click", () => {
+  currentPersonIndex = currentFilteredPeople.indexOf(person);
+  openProfileModal(person);
+});
 
     peopleGrid.appendChild(button);
   });
@@ -502,6 +516,18 @@ document.getElementById("modalJobRole").textContent =
 
     }
 
+    function showNextProfile() {
+  if (currentFilteredPeople.length === 0) return;
+
+  currentPersonIndex++;
+
+  if (currentPersonIndex >= currentFilteredPeople.length) {
+    currentPersonIndex = 0;
+  }
+
+  openProfileModal(currentFilteredPeople[currentPersonIndex]);
+}
+
     function closeModal(modal) {
       modal.classList.add("hidden");
     }
@@ -514,6 +540,8 @@ document.getElementById("modalJobRole").textContent =
     closeProfileModal.addEventListener("click", () => {
   closeModal(profileModal);
 });
+
+nextProfileButton.addEventListener("click", showNextProfile);
 
 closeAboutModal.addEventListener("click", () => {
   closeModal(aboutModal);

@@ -347,6 +347,8 @@ body {
     grid-column: span 1;
     grid-row: span 1;
   }
+}
+
 .people-count {
   position: relative;
   left: 3rem;
@@ -444,4 +446,26 @@ body {
   }
 }
 
+.profile-next-area {
+  margin-top: 4rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #ddd;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.next-profile-button {
+  border: 1px solid #111;
+  background: #fff;
+  color: #111;
+  padding: 0.75rem 1.25rem;
+  font: inherit;
+  cursor: pointer;
+  min-width: 160px;
+}
+
+.next-profile-button:hover {
+  background: #111;
+  color: #fff;
 }
